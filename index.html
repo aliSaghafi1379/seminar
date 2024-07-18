@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <!-- Font Vazir -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
+  </head>
+
+  <body class="bg-[url('./assets/images/backGround.jpg')] bg-cover object-fill">
+    <!-- Form -->
+    <div class="w-screen h-screen flex justify-center items-center">
+      <div
+        class="w-[350px] h-[350px] bg-[rgba(255,255,255,0.15)] backdrop-blur rounded-xl flex flex-col justify-center items-center"
+      >
+        <form
+          class="w-full h-4/6 flex flex-col items-center justify-around"
+          id="form"
+          action=""
+        >
+          <!-- userName -->
+          <div class="w-3/4 relative text-white text-sm">
+            <!-- input username -->
+            <input
+              type="text"
+              id="userName"
+              value=""
+              required
+              class="input w-full bg-transparent border rounded-3xl outline-none py-4 px-5"
+            />
+            <!-- lable username -->
+            <label
+              for="userName"
+              class="label absolute top-4 left-5 transition-all duration-500"
+            >
+              user name
+            </label>
+            <!-- icon username -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="white"
+              viewBox="0 0 24 24"
+              class="absolute top-5 right-5"
+            >
+              <path
+                d="M19 7.001c0 3.865-3.134 7-7 7s-7-3.135-7-7c0-3.867 3.134-7.001 7-7.001s7 3.134 7 7.001zm-1.598 7.18c-1.506 1.137-3.374 1.82-5.402 1.82-2.03 0-3.899-.685-5.407-1.822-4.072 1.793-6.593 7.376-6.593 9.821h24c0-2.423-2.6-8.006-6.598-9.819z"
+              />
+            </svg>
+          </div>
+          <!-- password -->
+          <div class="w-3/4 relative text-white text-sm">
+            <!-- input password -->
+            <input
+              type="password"
+              id="password"
+              value=""
+              required
+              class="input w-full bg-transparent border rounded-3xl outline-none py-4 px-5"
+            />
+            <!-- lable password -->
+            <label
+              for="password"
+              class="label absolute top-4 left-5 transition-all duration-500"
+            >
+              password
+            </label>
+            <!-- icon password -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              class="absolute top-4 right-3"
+              fill="white"
+            >
+              <path
+                d="M0 6v12h24v-12h-24zm22 10h-20v-8h20v8zm-14.812-4.048l-.217-.619-.658.25v-.708h-.643v.706l-.641-.249-.217.619.661.223-.422.559.537.392.397-.586.422.585.527-.392-.422-.558.676-.222zm4 0l-.217-.619-.658.25v-.708h-.643v.706l-.641-.249-.217.619.661.223-.422.559.536.392.398-.586.422.585.527-.392-.422-.558.676-.222zm4 0l-.217-.619-.658.25v-.708h-.643v.706l-.641-.249-.217.619.661.223-.422.559.536.392.398-.586.422.585.527-.392-.422-.558.676-.222zm4.812 2.048h-3v-1h3v1z"
+              />
+            </svg>
+            <!-- show password -->
+            <svg
+              id="show"
+              clip-rule="evenodd"
+              fill-rule="evenodd"
+              stroke-linejoin="round"
+              stroke-miterlimit="2"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute top-5 right-12 w-4 h-4 cursor-pointer"
+            >
+              <path
+                d="m11.998 5c-4.078 0-7.742 3.093-9.853 6.483-.096.159-.145.338-.145.517s.048.358.144.517c2.112 3.39 5.776 6.483 9.854 6.483 4.143 0 7.796-3.09 9.864-6.493.092-.156.138-.332.138-.507s-.046-.351-.138-.507c-2.068-3.403-5.721-6.493-9.864-6.493zm8.413 7c-1.837 2.878-4.897 5.5-8.413 5.5-3.465 0-6.532-2.632-8.404-5.5 1.871-2.868 4.939-5.5 8.404-5.5 3.518 0 6.579 2.624 8.413 5.5zm-8.411-4c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4zm0 1.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </div>
+          <!-- log in -->
+          <button
+            class="w-3/4 relative bg-[rgba(255,255,255,0.3)] text-white font-semibold text-sm rounded-3xl py-4 px-5 hover:bg-[rgba(255,255,255,0.5)] transition-all duration-500"
+            type="submit"
+          >
+            Log In
+          </button>
+        </form>
+        <!-- error when password or username is incorrect -->
+        <p id="error" class="text-red-400"></p>
+      </div>
+    </div>
+
+    <script src="./assets/javascript/script.js"></script>
+  </body>
+</html>
